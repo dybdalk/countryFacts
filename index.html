@@ -1,0 +1,45 @@
+<html>
+<head>
+	<script src="scripts/jquery-3.2.1.min.js"></script>
+	<script src="scripts/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<title>Kyle's Country Search</title>
+</head>
+<body>
+	<div class="loading-icon hidden">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="main">
+		<div class="search">
+			<div class="search-bar">
+				<input type="text" name="country-input" placeholder="Country"></input>
+				<button id="search-button" class="button"><span>search</span></button>
+				<a class="credits" href='https://restcountries.eu/'>powered by <s>Glassdoor</s> Rest Countries</a>
+			</div>
+		</div>
+		<div class="results hidden removed">
+			<div class="result result__country"><a class="name"></a></div>
+			<div class="result result__capital">Capital: <span class="capital"></span></div>
+			<div class="result result__population">Population: <span class="population"></span></div>
+			<div class="result result__area">Area: <span class="area"></span><span class="units"> km<sup>2</sup></span></div>
+			<div class="retry" id="success-retry">Search for another country</div>
+		</div>
+		<div class="error hidden removed">
+			<div class="error-title">Whoops!</div>
+			<div class="excuse">
+				Looks like we weren't able to get information about <span class="input-text"></span>.
+			</div>
+			<div class="recourse">
+				Try searching again, or maybe start a rebellion and form a NEW country called <span class="input-text"></span>*.
+			</div>
+			<div class="retry" id="error-retry">Search for another country</div>
+			<div class="footer">
+				*Conenza in no way supports military coups, violent uprisings, or any non-peace oriented ways of defecting from a sovereign nation
+			</div>
+		</div>
+	</div>
+</body>
+</html>
